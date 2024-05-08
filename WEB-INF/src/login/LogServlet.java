@@ -54,7 +54,7 @@ public class LogServlet extends HttpServlet{
     				// ログインOK画面に返す
     				HttpSession session = request.getSession();
     				session.setAttribute("result_user", result_user);
-    				request.getRequestDispatcher("/intro/logsuccess.jsp").forward(request, response);
+    				request.getRequestDispatcher("/intro/Main.jsp").forward(request, response);
 
     			}
     		}catch(Exception e){
