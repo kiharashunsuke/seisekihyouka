@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
     <title>新規アカウント登録</title>
-    <link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" type="text/css">
+    <link href="<%=request.getContextPath() %>/css/loginstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <form action="<%=request.getContextPath() %>/newLogin" method="Post">
