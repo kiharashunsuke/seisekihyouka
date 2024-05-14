@@ -13,7 +13,7 @@ public class DBManager {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection(
 					//"jdbc:postgresql://localhost:5432/logindb",
-					"jdbc:postgresql://43.207.27.181:5432/seiseki",
+					"jdbc:postgresql://52.195.46.205:5432/logindb_seisekihyouka",
 					"postgres", "postgres");
 			        return con;
 		} catch(ClassNotFoundException e) {
