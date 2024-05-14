@@ -19,16 +19,16 @@ public class NewLoginServlet extends HttpServlet {
         	LogBean lbean = new LogBean(id, password);
             int updateCount = LogDAO.insert(lbean);
         	if(updateCount < 1) {
-        		forwardURL = "/intro/newLoginFailed.jsp";
+        		forwardURL = "/newLogin/newLoginError.jsp";
         	} else {
-        		forwardURL = "/Main/Main.jsp";
+        		forwardURL = "/Login/log.jsp";
         	}
         }catch(NumberFormatException e) {
         		e.printStackTrace();
-        		forwardURL = "/intro/newLoginFailed.jsp";
+        		forwardURL = "/newLogin/newLoginError.jsp";
         }catch(SQLException e) {
         	e.printStackTrace();
-        	forwardURL = "/intro/newLoginFailed.jsp";
+        	forwardURL = "/newLogin/newLoginError.jsp";
         }
         	request.getRequestDispatcher(forwardURL).forward(request, response);
 

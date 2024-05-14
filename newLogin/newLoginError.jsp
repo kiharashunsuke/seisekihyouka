@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<font color="red">ログインに失敗しました</font>
+<font color="red">アカウント登録に失敗しました</font>
 <br><br>
-<a href="<%=request.getContextPath() %>/intro/newLogin.jsp">ログイン画面に戻る
+<a href="<%=request.getContextPath() %>/newLogin/newLogin.jsp">新規登録画面に戻る
 </a>
 </body>
 </html>
