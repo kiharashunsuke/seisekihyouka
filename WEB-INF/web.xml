@@ -107,4 +107,13 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<url-pattern>/newLogin</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+        <servlet-name>passResetMapping</servlet-name>
+        <servlet-class>login.PassResetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>passResetMapping</servlet-name>
+        <url-pattern>/passReset</url-pattern>
+    </servlet-mapping>
+
 	</web-app>
