@@ -9,24 +9,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class SelectServlet extends HttpServlet {
+public class TopServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException{
 		String forwardURL = null;
-
-
 		try {
 			List<StudentBean> studentList = CustomerDAO.getStudentList();
+
+			int number = 0;
+			int studentNumber = 0;
+			number = Integer.parseInt(request.getParameter("number"));
+			studentNumber = number - 1;
+
 			request.setAttribute("studentList", studentList);
-			forwardURL = "/database/selecttop.jsp";
+			request.setAttribute("studentNumber" ,studentNumber);
+
+			forwardURL = "/database/selectresult.jsp";
+
 			//request.getRequestDispatcher(forwardURL).forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			forwardURL = "/database/selecterror.jsp";
 		}
-
-		//selectresultにデータを送信
 		request.getRequestDispatcher(forwardURL).forward(request, response);
 	}
-
 }

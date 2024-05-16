@@ -13,7 +13,7 @@ public class DBManager {
 		try {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection(
-					"jdbc:postgresql://localhost:5432/serversidedb",
+					"jdbc:postgresql://52.195.46.205/seiseki_database",
 					"postgres", "postgres");
 			return con;
 
