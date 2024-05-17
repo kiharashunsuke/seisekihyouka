@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import newLogin.LogBean;
-
 public class PassResetServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String error = "";
@@ -16,7 +14,7 @@ public class PassResetServlet extends HttpServlet {
 			request.setCharacterEncoding("Windows-31J");
 			String id = request.getParameter("id");
 			String password = request.getParameter("password");
-			LogBean lbean = new LogBean(id, password);
+			LoginBean lbean = new LoginBean(id, password);
 
 			PassResetDAO pRe = new PassResetDAO();
 

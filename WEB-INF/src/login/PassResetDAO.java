@@ -5,8 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import newLogin.LogBean;
-
 public class PassResetDAO {
 	public static Connection getConnection() throws SQLException {
 		try {
@@ -21,7 +19,7 @@ public class PassResetDAO {
 		}
 	}
 
-	public int update(LogBean lbean) {
+	public int update(LoginBean lbean) {
 		Connection con = null;
 		Statement smt = null;
 
