@@ -25,6 +25,10 @@
             <th>Password</th>
             <td><input type="password" class="form-control" id="pass" name="password"></td>
         </tr>
+        <tr>
+            <th>メールアドレス</th>
+            <td><input type="text" class="form-control" id="mail" name="mail" ></td>
+        </tr>
         <td>
             <input type="submit" value="ログイン" required>
         </td>
