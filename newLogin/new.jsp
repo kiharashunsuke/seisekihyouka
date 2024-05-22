@@ -11,7 +11,7 @@
 
 <h1>新規orログイン</h1>
 
-<a href="<%=request.getContextPath() %>/intro/newLogin.jsp">新規の方はこちら</a><br>
-<a href="<%=request.getContextPath() %>/intro/log.jsp">アカウントを作成済みの方はこちら</a>
+<a href="<%=request.getContextPath() %>/newLogin/newLogin.jsp">新規の方はこちら</a><br>
+<a href="<%=request.getContextPath() %>/Login/log.jsp">アカウントを作成済みの方はこちら</a>
 </body>
 </html>

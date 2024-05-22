@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
     <title>新規アカウント登録</title>
-    <link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" type="text/css">
+    <link href="<%=request.getContextPath() %>/css/loginstyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <form action="<%=request.getContextPath() %>/newLogin" method="Post">
@@ -24,6 +24,10 @@
         <tr>
             <th>Password</th>
             <td><input type="password" class="form-control" id="pass" name="password"></td>
+        </tr>
+        <tr>
+            <th>メールアドレス</th>
+            <td><input type="text" class="form-control" id="mail" name="mail" ></td>
         </tr>
         <td>
             <input type="submit" value="ログイン" required>

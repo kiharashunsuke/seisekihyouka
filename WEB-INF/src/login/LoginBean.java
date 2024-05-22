@@ -6,6 +6,12 @@ public class LoginBean implements Serializable {
 	private String id;
 	private String password;
 	private int login_user_flg;
+	public LoginBean() {
+	}
+	public LoginBean(String id, String password) {
+		this.id = id;
+		this.password = password;
+	}
 
 	public String getId() {
 		return id;

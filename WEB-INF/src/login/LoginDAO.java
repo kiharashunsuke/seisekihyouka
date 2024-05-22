@@ -28,7 +28,7 @@ public class LoginDAO {
 			Class.forName("org.postgresql.Driver");
 			db_con = DriverManager.getConnection(
 					//"jdbc:postgresql://localhost:5432/logindb",
-					"jdbc:postgresql://43.207.27.181:5432/seiseki",
+					"jdbc:postgresql://52.195.46.205:5432/logindb_seisekihyouka",
 					"postgres", "postgres");
 
 			String sql = "select * from login where id = ? and  password = ?";
