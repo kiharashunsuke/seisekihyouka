@@ -9,7 +9,7 @@
 <title>生徒選択画面</title>
 </head>
 <body>
-<%--servletの呼び出し --%>
+<%--servletの呼び出しs --%>
 <form action = "<%=request.getContextPath() %>/top" method = "Post">
 <%-- nameはservletと一致させる必要あり。 --%>
 <select name = "number">
@@ -22,7 +22,25 @@
 
 %>
 <%--選択肢が生徒の名前で、送信されるデータは番号になる --%>
-	 <option value ="<%=sbean.getStudent_no() %>"><%=sbean.getName() %></option>
+	<option value ="<%=sbean.getStudent_no() %>"><%=sbean.getName() %></option>
+<%
+}
+%>
+</select>
+<br>
+<%--二つ目のセレクトボックス --%>
+<select name = "tableName">
+<%--リストを取得。繰り返し分で人数分表示 --%>
+<%
+
+		List<TableBean> tableList =
+		(List<TableBean>)request.getAttribute("tableList");
+	for(int j = 0; j < tableList.size(); j++){
+		TableBean tbean = tableList.get(j);
+
+%>
+<%--選択肢、送信されるデータはDBに存在するテーブル名になる --%>
+	 <option value ="<%=tbean.getTableName() %>"><%=tbean.getTableName() %></option>
 <%
 }
 %>

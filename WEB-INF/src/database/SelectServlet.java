@@ -13,13 +13,16 @@ public class SelectServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException{
 		String forwardURL = null;
-
-
 		try {
-			List<StudentBean> studentList = CustomerDAO.getStudentList();
+			//生徒の名前と、テスト名を選択するセレクトボックスの要素に使用するリストの呼び出し
+			List<StudentBean> studentList = TestScoreDAO.getStudentList();
+			List<TableBean> tableList = TestScoreDAO.getTableList();
+			//データ送信の準備
 			request.setAttribute("studentList", studentList);
+			request.setAttribute("tableList", tableList);
+			//成功時の送信先URL
 			forwardURL = "/database/selecttop.jsp";
-			//request.getRequestDispatcher(forwardURL).forward(request, response);
+			//Exceptionの対応
 		} catch (SQLException e) {
 			e.printStackTrace();
 			forwardURL = "/database/selecterror.jsp";

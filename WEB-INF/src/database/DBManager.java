@@ -13,7 +13,7 @@ public class DBManager {
 		try {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection(
-					"jdbc:postgresql://52.195.46.205/seiseki_database",
+					"jdbc:postgresql://localhost:5432/serversidedb",
 					"postgres", "postgres");
 			return con;
 
@@ -47,6 +47,7 @@ public class DBManager {
 			}
 		}
 	}
+	//StudentListの作成
 	public static <T> List<T> findAll(String sql, ResultSetBeanMapping<T> mapping)
 		throws SQLException{
 
@@ -56,9 +57,11 @@ public class DBManager {
 			con = getConnection();
 			smt = con.createStatement();
 			//データベースから呼び出し
+
 			ResultSet rs = smt.executeQuery(sql);
 
 			//studentListを作成してDBのデータ（名前）をリストに登録
+
 			List<T> studentList = new ArrayList<T>();
 			while (rs.next()) {
 				T bean = mapping.createFromResultSet(rs);
@@ -83,4 +86,74 @@ public class DBManager {
 
 		}
 	}
+	//tableListの作成
+	public static <T>List<T> simpleFind(String tableSQL, ResultSetBeanMapping<T> mapping) throws SQLException{
+		Connection con = null;
+		Statement smt = null;
+		try {
+			con = getConnection();
+			smt = con.createStatement();
+			//データベースから呼び出し
+			ResultSet rs = smt.executeQuery(tableSQL);
+			List<T> tableList = new ArrayList<T>();
+			while(rs.next()) {
+				T bean = mapping.createFromResultSet(rs);
+				tableList.add(bean);
+			}
+			return tableList;
+		} finally {
+			if (smt != null) {
+				try {
+					smt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if(con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+
+		}
+	}
+	//scoreListの作成
+	public static <T> List<T> findScore(String scoreSQL, ResultSetBeanMapping<T> mapping)
+			throws SQLException{
+
+			Connection con = null;
+			Statement smt = null;
+			try {
+				con = getConnection();
+				smt = con.createStatement();
+				//データベースから呼び出し
+
+				ResultSet rs = smt.executeQuery(scoreSQL);
+
+				List<T> scoreList = new ArrayList<T>();
+				while (rs.next()) {
+					T bean = mapping.createFromResultSet(rs);
+					scoreList.add(bean);
+				}
+				return scoreList;
+			} finally {
+				if (smt != null) {
+					try {
+						smt.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				if(con != null) {
+					try {
+						con.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+
+			}
+		}
 }

@@ -9,15 +9,15 @@
 <title>生徒の成績登録ページ</title>
 </head>
 <body>
-
+<%--選択した生徒とテスト名からデータを参照し表示するページ --%>
 <h1 align = center>成績表示画面</h1>
 
 <br>
 
 <table border = 3 width = 80% align = center>
-<%-- 1段目 --%>
+
 	<tr>
-		<th>テスト名</th>
+
 		<th>国語</th>
 		<th>数学</th>
 		<th>理科</th>
@@ -28,59 +28,39 @@
 
 
 <%
-List<StudentBean> studentList =
-(List<StudentBean>)request.getAttribute("studentList");
+List<StudentBean> scoreList =
+(List<StudentBean>)request.getAttribute("scoreList");
 
 %>
 
 <%--int型でデータをとるために変換 --%>
 <% int studentNumber = ((Integer)(request.getAttribute("studentNumber"))); %>
-	<% StudentBean sbean = studentList.get(studentNumber); %>
+	<% StudentBean sbean = scoreList.get(studentNumber); %>
 <%--生徒の名前も取得して分かりやすいように表示する --%>
 	<h2><%=sbean.getName() %>の成績</h2>
-
-
-	<tr><td>学力テスト1年生</td>
+<%--テストの種類も表示する --%>
+<h3 align = center><%=request.getAttribute("tableName") %></h3>
+	<tr>
 		<td>
-		<%=sbean.getGakuryokutest_1_japanese() %>
+		<%=sbean.getJapanese() %>
 		</td>
 		<td>
-		<%=sbean.getGakuryokutest_math() %>
+		<%=sbean.getMath() %>
 		</td>
 		<td>
-		<%=sbean.getGakuryokutest_science() %>
+		<%=sbean.getScience() %>
 		</td>
 		<td>
-		<%=sbean.getGakuryokutest_social() %>
+		<%=sbean.getSocial() %>
 		</td>
 		<td>
-		<%=sbean.getGakuryokutest_english() %>
+		<%=sbean.getEnglish() %>
 		</td>
 		<td>
-		<%=sbean.getGakuryokutest_goukei() %>
+		<%=sbean.getGoukei() %>
 		</td>
 	</tr>
-	<tr><td>学力テスト２年生</td>
-		<td>
-		<%=sbean.getGakuryokutest_2_japanese() %>
-		</td>
-		<td>
-		<%=sbean.getGakuryokutest_2_math() %>
-		</td>
-		<td>
-		<%=sbean.getGakuryokutest_2_science() %>
-		</td>
-		<td>
-		<%=sbean.getGakuryokutest_2_social() %>
-		</td>
-		<td>
-		<%=sbean.getGakuryokutest_2_english() %>
-		</td>
-		<td>
-		<%=sbean.getGakuryokutest_2_goukei() %>
-		</td>
 
-	</tr>
 </table>
 
 
