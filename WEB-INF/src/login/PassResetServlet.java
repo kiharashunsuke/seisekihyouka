@@ -30,7 +30,7 @@ public class PassResetServlet extends HttpServlet {
 			request.getRequestDispatcher("/Login/passReset.jsp").forward(request, response);
 		} finally {
 			request.setAttribute("error", error);
-			request.getRequestDispatcher("/Login/log.jsp").forward(request, response);
+			request.getRequestDispatcher("/Login/passReset.jsp").forward(request, response);
 		}
 	}
 }
