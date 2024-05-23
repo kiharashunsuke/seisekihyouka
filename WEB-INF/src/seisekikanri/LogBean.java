@@ -1,4 +1,4 @@
-package newLogin;
+package seisekikanri;
 
 public class LogBean {
 	private String id;

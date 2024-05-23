@@ -1,4 +1,4 @@
-package login;
+package seisekikanri;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ public class PassResetDAO {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection(
 					//"jdbc:postgresql://localhost:5432/logindb",
-					"jdbc:postgresql://52.195.46.205:5432/seiseki",
+					"jdbc:postgresql://52.195.46.205:5432/logindb_seisekihyouka",
 					"postgres", "postgres");
 			return con;
 		} catch (ClassNotFoundException e) {

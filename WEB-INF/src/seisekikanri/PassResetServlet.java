@@ -1,4 +1,4 @@
-package login;
+package seisekikanri;
 
 import java.io.IOException;
 
@@ -24,13 +24,14 @@ public class PassResetServlet extends HttpServlet {
 
 		} catch (IllegalStateException e) {
 			error = "DB接続エラーの為、更新できませんでした。";
-			request.getRequestDispatcher("/Login/passReset.jsp").forward(request, response);
+			request.getRequestDispatcher("/seisekikanri/passReset.jsp").forward(request, response);
 		} catch (Exception e) {
 			error = "予期せぬエラーが発生しました。<br>" + e;
-			request.getRequestDispatcher("/Login/passReset.jsp").forward(request, response);
+			request.getRequestDispatcher("/seisekikanri/passReset.jsp").forward(request, response);
 		} finally {
 			request.setAttribute("error", error);
-			request.getRequestDispatcher("/Login/passReset.jsp").forward(request, response);
+			request.getRequestDispatcher("/seisekikanri/passReset.jsp").forward(request, response);
 		}
 	}
 }
+

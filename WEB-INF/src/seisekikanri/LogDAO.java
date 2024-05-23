@@ -1,4 +1,5 @@
-package newLogin;
+package seisekikanri;
+
 import java.sql.SQLException;
 
 public class LogDAO {

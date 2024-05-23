@@ -1,4 +1,4 @@
-package login;
+package seisekikanri;
 
 import java.io.Serializable;
 
@@ -20,7 +20,6 @@ public class LoginBean implements Serializable {
 		this.id = id;
 		}
 
-	// ゲッターとセッターの作成（パスワード）
 	public String getPassword() {
 		return password;
 		}
@@ -28,7 +27,6 @@ public class LoginBean implements Serializable {
 		this.password = password;
 		}
 
-	// ゲッターとセッターの作成（ユーザフラグ）
 	public int getLogin_user_flg() {
 		return login_user_flg;
 		}

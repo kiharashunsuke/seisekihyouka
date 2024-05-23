@@ -10,7 +10,7 @@
 
 <font color="red">ログインに失敗しました</font>
 <br><br>
-<a href="<%=request.getContextPath() %>/Login/log.jsp">ログイン画面に戻る
+<a href="<%=request.getContextPath() %>/seisekikanri/log.jsp">ログイン画面に戻る
 </a>
 </body>
 </html>

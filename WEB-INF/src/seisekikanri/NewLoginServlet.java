@@ -1,4 +1,4 @@
-package newLogin;
+package seisekikanri;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -20,16 +20,16 @@ public class NewLoginServlet extends HttpServlet {
         	LogBean lbean = new LogBean(id, password,mail);
             int updateCount = LogDAO.insert(lbean);
         	if(updateCount < 1) {
-        		forwardURL = "/newLogin/newLoginError.jsp";
+        		forwardURL = "/seisekikanri/newLoginError.jsp";
         	} else {
-        		forwardURL = "/Login/log.jsp";
+        		forwardURL = "/seisekikanri/log.jsp";
         	}
         }catch(NumberFormatException e) {
         		e.printStackTrace();
-        		forwardURL = "/newLogin/newLoginError.jsp";
+        		forwardURL = "/seisekikanri/newLoginError.jsp";
         }catch(SQLException e) {
         	e.printStackTrace();
-        	forwardURL = "/newLogin/newLoginError.jsp";
+        	forwardURL = "/seisekikanri/newLoginError.jsp";
         }
         	request.getRequestDispatcher(forwardURL).forward(request, response);
 

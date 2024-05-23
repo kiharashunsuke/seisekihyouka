@@ -1,4 +1,4 @@
-package login;
+package seisekikanri;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -74,4 +74,5 @@ public class LoginDAO {
 		return array_userinfo;
 	}
 }
+
 
