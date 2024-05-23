@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=windows-31j"
 	pageEncoding="windows-31j"%>
-<%@ page import="login.LoginBean"%>
+<%@ page import="seiseki.LoginBean"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
-<link href="<%=request.getContextPath() %>/seisekikanri/log.css" rel="stylesheet" type="text/css">
+<link href="<%=request.getContextPath() %>/seiseki/log.css" rel="stylesheet" type="text/css">
 <title>ログインページ</title>
 </head>
 <body>

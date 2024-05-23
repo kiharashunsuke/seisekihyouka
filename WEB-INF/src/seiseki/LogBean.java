@@ -1,4 +1,4 @@
-package seisekikanri;
+package seiseki;
 
 public class LogBean {
 	private String id;

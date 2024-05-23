@@ -1,4 +1,4 @@
-package seisekikanri;
+package seiseki;
 
 import java.io.Serializable;
 

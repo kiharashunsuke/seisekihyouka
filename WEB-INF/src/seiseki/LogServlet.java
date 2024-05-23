@@ -1,4 +1,4 @@
-package seisekikanri;
+package seiseki;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public class LogServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	// ログイン画面へ遷移
-    	RequestDispatcher rd = request.getRequestDispatcher("/seisekikanri/log.jsp");
+    	RequestDispatcher rd = request.getRequestDispatcher("/seiseki/log.jsp");
     	rd.forward(request, response);
 	}
 
@@ -43,7 +43,7 @@ public class LogServlet extends HttpServlet{
     				result.setLogin_user_flg(1);
     				// ログイン画面に返す
     				request.setAttribute("result", result);
-    				request.getRequestDispatcher("/seisekikanri/log.jsp").forward(request, response);
+    				request.getRequestDispatcher("/seiseki/log.jsp").forward(request, response);
     			} else {
     				// ログインユーザ用にBeanクラスをインスタンス
     				LoginBean result_user = new LoginBean();
@@ -55,7 +55,7 @@ public class LogServlet extends HttpServlet{
     				// ログインOK画面に返す
     				HttpSession session = request.getSession();
     				session.setAttribute("result_user", result_user);
-    				request.getRequestDispatcher("/seisekikanri/Main.jsp").forward(request, response);
+    				request.getRequestDispatcher("/seiseki/Main.jsp").forward(request, response);
 
     			}
     		}catch(Exception e){

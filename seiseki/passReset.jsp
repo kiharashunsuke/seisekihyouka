@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
-<link href="<%=request.getContextPath() %>/seisekikanri/passReset.css" rel="stylesheet" type="text/css">
+<link href="<%=request.getContextPath() %>/seiseki/passReset.css" rel="stylesheet" type="text/css">
 <title>パスワード再設定ページ</title>
 </head>
 <body>
