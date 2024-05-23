@@ -32,6 +32,9 @@
 <form action="<%=request.getContextPath() %>/select" method="Post">
 <input type = "submit" value = "¶“k‘I‘ð‚Ö">
 </form>
+<form action="<%=request.getContextPath() %>/input" method ="Post">
+<input type = "submit" value ="¬Ñ“ü—Í‰æ–Ê‚Ö">
+</form>
 
 </body>
 </html>
