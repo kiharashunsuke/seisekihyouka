@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
 <title>生徒の成績登録ページ</title>
+<link href="css/common.css" rel="stylesheet" type="text/css"
+media="all">
 </head>
 <body>
 <%--選択した生徒とテスト名からデータを参照し表示するページ --%>
@@ -17,7 +19,7 @@
 <table border = 3 width = 80% align = center>
 
 	<tr>
-
+		<th></th>
 		<th>国語</th>
 		<th>数学</th>
 		<th>理科</th>
@@ -40,7 +42,7 @@ List<StudentBean> scoreList =
 	<h2><%=sbean.getName() %>の成績</h2>
 <%--テストの種類も表示する --%>
 <h3 align = center><%=request.getAttribute("tableName") %></h3>
-	<tr>
+	<tr><td>点数</td>
 		<td>
 		<%=sbean.getJapanese() %>
 		</td>
@@ -59,6 +61,14 @@ List<StudentBean> scoreList =
 		<td>
 		<%=sbean.getGoukei() %>
 		</td>
+	</tr>
+	<tr><td>平均点</td>
+		<td><%=request.getAttribute("avgJ") %></td>
+		<td><%=request.getAttribute("avgM") %></td>
+		<td><%=request.getAttribute("avgSC") %></td>
+		<td><%=request.getAttribute("avgSo") %></td>
+		<td><%=request.getAttribute("avgE") %></td>
+		<td><%=request.getAttribute("avgG") %></td>
 	</tr>
 
 </table>
