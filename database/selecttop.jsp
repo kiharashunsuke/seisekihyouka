@@ -9,7 +9,12 @@
 <title>生徒選択画面</title>
 </head>
 <body>
+<<<<<<< HEAD
+
+<%--servletの呼び出し --%>
+=======
 <%--servletの呼び出しs --%>
+>>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
 <form action = "<%=request.getContextPath() %>/top" method = "Post">
 <%-- nameはservletと一致させる必要あり。 --%>
 <select name = "number">
