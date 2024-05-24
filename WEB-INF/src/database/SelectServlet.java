@@ -20,14 +20,12 @@ public class SelectServlet extends HttpServlet {
 			List<TableBean> tableList = TestScoreDAO.getTableList();
 			//データ送信の準備
 			request.setAttribute("studentList", studentList);
-<<<<<<< HEAD
+
 			forwardURL = "/database/selectresult.jsp";
-=======
 			request.setAttribute("tableList", tableList);
 			//成功時の送信先URL
 			forwardURL = "/database/selecttop.jsp";
 			//Exceptionの対応
->>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
 		} catch (SQLException e) {
 			e.printStackTrace();
 			forwardURL = "/database/selecterror.jsp";
@@ -36,8 +34,4 @@ public class SelectServlet extends HttpServlet {
 		//selectresultにデータを送信
 		request.getRequestDispatcher(forwardURL).forward(request, response);
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
 }

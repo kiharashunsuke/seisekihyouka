@@ -2,11 +2,9 @@ package database;
 
 public class StudentBean {
 
-<<<<<<< HEAD
 
-=======
+
 //DBのカラム名を統一し、テーブルを分けることでメソッドを共有
->>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
 	private String name;
 	private int student_no;
 	private int japanese;
@@ -78,8 +76,5 @@ public class StudentBean {
 	public void setGoukei(int goukei) {
 		this.goukei = goukei;
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
 }
