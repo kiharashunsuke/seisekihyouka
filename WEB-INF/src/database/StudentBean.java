@@ -2,8 +2,13 @@ package database;
 
 public class StudentBean {
 
+<<<<<<< HEAD
 
+=======
+//DBのカラム名を統一し、テーブルを分けることでメソッドを共有
+>>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
 	private String name;
+	private int student_no;
 	private int japanese;
 	private int math;
 	private int science;
@@ -14,7 +19,7 @@ public class StudentBean {
 	public StudentBean() {
 
 }
-	public StudentBean(String name, int japanese, int math, int science,
+	public StudentBean(String name, int student_no, int japanese, int math, int science,
 					int social, int english, int goukei) {
 		this.name = name;
 		this.japanese = japanese;
@@ -23,6 +28,7 @@ public class StudentBean {
 		this.social = social;
 		this.english = english;
 		this.goukei = goukei;
+
 	}
 	public String getName() {
 		return name;
@@ -32,6 +38,12 @@ public class StudentBean {
 	}
 	public int getMath() {
 		return math;
+	}
+	public int getStudent_no() {
+		return student_no;
+	}
+	public void setStudent_no(int student_no) {
+		this.student_no = student_no;
 	}
 	public void setMath(int math) {
 		this.math = math;
@@ -66,4 +78,8 @@ public class StudentBean {
 	public void setGoukei(int goukei) {
 		this.goukei = goukei;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
 }

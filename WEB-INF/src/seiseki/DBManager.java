@@ -1,4 +1,4 @@
-package newLogin;
+package seiseki;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

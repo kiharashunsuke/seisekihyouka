@@ -1,4 +1,4 @@
-package login;
+package seiseki;
 
 import java.io.IOException;
 
@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import newLogin.LogBean;
-
 public class PassResetServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String error = "";
@@ -16,7 +14,7 @@ public class PassResetServlet extends HttpServlet {
 			request.setCharacterEncoding("Windows-31J");
 			String id = request.getParameter("id");
 			String password = request.getParameter("password");
-			LogBean lbean = new LogBean(id, password);
+			LoginBean lbean = new LoginBean(id, password);
 
 			PassResetDAO pRe = new PassResetDAO();
 
@@ -26,13 +24,14 @@ public class PassResetServlet extends HttpServlet {
 
 		} catch (IllegalStateException e) {
 			error = "DB接続エラーの為、更新できませんでした。";
-			request.getRequestDispatcher("/Login/passReset.jsp").forward(request, response);
+			request.getRequestDispatcher("/seiseki/passReset.jsp").forward(request, response);
 		} catch (Exception e) {
 			error = "予期せぬエラーが発生しました。<br>" + e;
-			request.getRequestDispatcher("/Login/passReset.jsp").forward(request, response);
+			request.getRequestDispatcher("/seiseki/passReset.jsp").forward(request, response);
 		} finally {
 			request.setAttribute("error", error);
-			request.getRequestDispatcher("/Login/log.jsp").forward(request, response);
+			request.getRequestDispatcher("/seiseki/passReset.jsp").forward(request, response);
 		}
 	}
 }
+

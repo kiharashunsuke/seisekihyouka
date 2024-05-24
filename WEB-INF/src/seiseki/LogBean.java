@@ -1,16 +1,17 @@
-package newLogin;
+package seiseki;
 
 public class LogBean {
 	private String id;
 	private String password;
+	private String mail;
 
 	public LogBean() {
 	}
-	public LogBean(String id, String password) {
+	public LogBean(String id, String password, String mail) {
 		this.id = id;
 		this.password = password;
+		this.setMail(mail);
 	}
-
 	public String getId() {
 		return id;
 	}
@@ -22,6 +23,12 @@ public class LogBean {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getMail() {
+		return mail;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 }
 

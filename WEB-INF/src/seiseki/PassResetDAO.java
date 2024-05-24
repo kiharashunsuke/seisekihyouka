@@ -1,11 +1,9 @@
-package login;
+package seiseki;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import newLogin.LogBean;
 
 public class PassResetDAO {
 	public static Connection getConnection() throws SQLException {
@@ -13,7 +11,7 @@ public class PassResetDAO {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection(
 					//"jdbc:postgresql://localhost:5432/logindb",
-					"jdbc:postgresql://52.195.46.205:5432/seiseki",
+					"jdbc:postgresql://52.195.46.205:5432/logindb_seisekihyouka",
 					"postgres", "postgres");
 			return con;
 		} catch (ClassNotFoundException e) {
@@ -21,7 +19,7 @@ public class PassResetDAO {
 		}
 	}
 
-	public int update(LogBean lbean) {
+	public int update(LoginBean lbean) {
 		Connection con = null;
 		Statement smt = null;
 

@@ -16,14 +16,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	</servlet-mapping>
 
 
-	<servlet>
-		<servlet-name>loginS</servlet-name>
-		<servlet-class>introduction.LoginServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>loginS</servlet-name>
-		<url-pattern>/login</url-pattern>
-		</servlet-mapping>
 
 
 	<servlet>
@@ -116,4 +108,19 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <url-pattern>/passReset</url-pattern>
     </servlet-mapping>
 
+<<<<<<< HEAD
 	</web-app>
+=======
+
+   <servlet>
+        <servlet-name>loginS</servlet-name>
+        <servlet-class>login.LogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginS</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+     </web-app>
+
+>>>>>>> da37c1e86a35666e66fd59337022580ccfc2171b
