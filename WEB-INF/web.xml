@@ -102,31 +102,30 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	</filter-mapping>
 
 	<servlet>
-		<servlet-name>newLoginS</servlet-name>
-		<servlet-class>newLogin.NewLoginServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>newLoginS</servlet-name>
-		<url-pattern>/newLogin</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-        <servlet-name>passResetMapping</servlet-name>
-        <servlet-class>login.PassResetServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>passResetMapping</servlet-name>
-        <url-pattern>/passReset</url-pattern>
-    </servlet-mapping>
-
-
-   <servlet>
         <servlet-name>loginS</servlet-name>
-        <servlet-class>login.LogServlet</servlet-class>
+        <servlet-class>seiseki.LogServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loginS</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>newLoginS</servlet-name>
+        <servlet-class>seiseki.NewLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newLoginS</servlet-name>
+        <url-pattern>/newLogin</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+        <servlet-name>passReset</servlet-name>
+        <servlet-class>seiseki.PassResetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>passReset</servlet-name>
+        <url-pattern>/passReset</url-pattern>
     </servlet-mapping>
 
      </web-app>
