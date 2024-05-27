@@ -15,5 +15,7 @@
 	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/jstl-api-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/jstl-impl-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/postgresql-42.2.20.jar"/>
+	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/javax.activation.jar"/>
+	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/javax.mail.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>

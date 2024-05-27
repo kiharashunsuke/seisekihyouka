@@ -10,8 +10,8 @@ public class PassResetDAO {
 		try {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection(
-					//"jdbc:postgresql://localhost:5432/logindb",
-					"jdbc:postgresql://52.195.46.205:5432/logindb_seisekihyouka",
+					"jdbc:postgresql://localhost:5432/logindb",
+					//"jdbc:postgresql://52.195.46.205:5432/logindb_seisekihyouka",
 					"postgres", "postgres");
 			return con;
 		} catch (ClassNotFoundException e) {
@@ -19,15 +19,15 @@ public class PassResetDAO {
 		}
 	}
 
-	public int update(LoginBean lbean) {
+	public static int update(PassResetMailBean pp) {
 		Connection con = null;
 		Statement smt = null;
 
 		int count = 0;
 
 		String sql = "UPDATE LOGIN SET "
-				+ "PASSWORD = '" + lbean.getPassword() + "' "
-				+ "WHERE ID = '" + lbean.getId() +"'" ;
+				+ "PASSWORD = '" + pp.getPassword() + "' "
+				+ "WHERE ID = '" + pp.getId() +"'" ;
 
 		try {
 			con = getConnection();
