@@ -13,7 +13,7 @@
     <div class="login">
   <form class="login-container">
             <p><input type="text" placeholder=id pattern="^[a-zA-Z0-9]+$" class="form-control" id="ID" name="id" required></p>
-            <%-- <p><input type="text" placeholder="email"  class="form-control" id="ID" name="email"  required></p> --%>
+            <p><input type="text" placeholder="email"  class="form-control" id="ID" name="email"  required></p>
             <p><input type="password" placeholder=password pattern="^[a-zA-Z0-9]+$" class="form-control" id="password" name="password" minlength="6" required></p>
             <p><input type="submit" value="パスワード変更" required></p>
             </form>

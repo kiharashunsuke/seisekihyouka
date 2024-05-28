@@ -20,6 +20,7 @@ public class PassResetMailSentServlet extends HttpServlet {
 		ResultSet rs = null;
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");
+		String email = request.getParameter("email");
 
 		String forwardURL = null;
 		try {
@@ -32,7 +33,7 @@ public class PassResetMailSentServlet extends HttpServlet {
 			ps.setString(1, password);
 			rs = ps.executeQuery();
 			boolean bo = rs.next();
-			PassResetMailBean pp = new PassResetMailBean(id, password);
+			PassResetMailBean pp = new PassResetMailBean(id, password, email);
 			int updateCount = PassResetDAO.update(pp);
 			if(updateCount < 1 || bo ) {
 				forwardURL = "/seseki/passResetMailError.jsp";
