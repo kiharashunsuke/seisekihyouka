@@ -7,6 +7,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
     <title>新規アカウント登録</title>
     <link href="<%=request.getContextPath() %>/seiseki/newLogin.css" rel="stylesheet" type="text/css">
+    <script>
+function validateEmail() {
+    var email = document.getElementById("email").value;
+    var atPosition = email.indexOf("@");
+    if (atPosition === -1) {
+        alert("@を含めて入力してください。");
+        return false;
+    }
+    return true;
+}
 </head>
 <body>
     <form action="<%=request.getContextPath() %>/newLogin" method="Post">
