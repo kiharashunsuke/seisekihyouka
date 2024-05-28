@@ -68,31 +68,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<url-pattern>/select</url-pattern>
 	</servlet-mapping>
 
-
-
-
-	<filter>
-		<filter-name>encodingF</filter-name>
-		<filter-class>introduction.EncodingFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>encodingF</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-
-
-	<filter>
-		<filter-name>logF</filter-name>
-		<filter-class>introduction.LogFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>logF</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-
-
-   <servlet>
-
+    <servlet>
         <servlet-name>loginS</servlet-name>
         <servlet-class>seiseki.LogServlet</servlet-class>
     </servlet>
