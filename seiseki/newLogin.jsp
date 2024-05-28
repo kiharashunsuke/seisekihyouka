@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
     <title>新規アカウント登録</title>
-    <link href="<%=request.getContextPath() %>/seiseki/newLogin.css" rel="stylesheet" type="text/css">
+    <link href="<%=request.getContextPath() %>/intro/newLogin.css" rel="stylesheet" type="text/css">
     <script>
 function validateEmail() {
     var email = document.getElementById("email").value;
@@ -17,6 +17,7 @@ function validateEmail() {
     }
     return true;
 }
+</script>
 </head>
 <body>
     <form action="<%=request.getContextPath() %>/newLogin" method="Post">
@@ -29,6 +30,9 @@ function validateEmail() {
             <p><input type="submit" value="登録" required></p>
             </form>
             </div>
+
     </form>
-    </body>
-    </html>
+
+
+</body>
+</html>
