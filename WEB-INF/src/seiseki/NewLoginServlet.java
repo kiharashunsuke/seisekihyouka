@@ -13,11 +13,11 @@ public class NewLoginServlet extends HttpServlet {
         request.setCharacterEncoding("Windows-31J");
         String id = request.getParameter("id");
         String password = request.getParameter("password");
-        String mail = request.getParameter("mail");
+        String email = request.getParameter("email");
 
         String forwardURL = null;
         try {
-        	LogBean lbean = new LogBean(id, password,mail);
+        	LogBean lbean = new LogBean(id, password,email);
             int updateCount = LogDAO.insert(lbean);
         	if(updateCount < 1) {
         		forwardURL = "/seiseki/newLoginError.jsp";

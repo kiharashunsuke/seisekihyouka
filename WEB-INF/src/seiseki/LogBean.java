@@ -3,14 +3,14 @@ package seiseki;
 public class LogBean {
 	private String id;
 	private String password;
-	private String mail;
+	private String email;
 
 	public LogBean() {
 	}
-	public LogBean(String id, String password, String mail) {
+	public LogBean(String id, String password, String email) {
 		this.id = id;
 		this.password = password;
-		this.setMail(mail);
+		this.email = email;
 	}
 	public String getId() {
 		return id;
@@ -24,11 +24,11 @@ public class LogBean {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }
 
