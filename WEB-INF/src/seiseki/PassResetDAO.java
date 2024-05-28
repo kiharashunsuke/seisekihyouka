@@ -27,7 +27,8 @@ public class PassResetDAO {
 
 		String sql = "UPDATE LOGIN SET "
 				+ "PASSWORD = '" + pp.getPassword() + "' "
-				+ "WHERE ID = '" + pp.getId() +"'" ;
+				+ "WHERE ID = '" + pp.getId() +"'"
+				+ "AND email = '" + pp.getEmail() + "'";
 
 		try {
 			con = getConnection();
