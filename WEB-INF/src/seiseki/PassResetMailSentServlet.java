@@ -19,13 +19,13 @@ public class PassResetMailSentServlet extends HttpServlet {
 			PassResetMailBean pp = new PassResetMailBean(id, password);
 			int updateCount = PassResetDAO.update(pp);
 			if(updateCount < 1) {
-				forwardURL = "/seiseki/newLoginError.jsp";
+				forwardURL = "/seiseki/passReset.jsp";
 			}else {
 				forwardURL = "/seiseki/log.jsp";
 			}
 		}catch(NumberFormatException e) {
         		e.printStackTrace();
-        		forwardURL = "/seiseki/newLoginError.jsp";
+        		forwardURL = "/seiseki/passReset.jsp";
         }
         	request.getRequestDispatcher(forwardURL).forward(request, response);
 
