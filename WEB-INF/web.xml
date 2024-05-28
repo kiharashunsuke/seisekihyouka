@@ -69,17 +69,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	</servlet-mapping>
 
 
-	<servlet>
-		<servlet-name>topS</servlet-name>
-		<servlet-class>database.TopServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>topS</servlet-name>
-		<url-pattern>/top</url-pattern>
-	</servlet-mapping>
-
-
-
 
 
 	<filter>
@@ -101,7 +90,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-	<servlet>
+
+   <servlet>
+
         <servlet-name>loginS</servlet-name>
         <servlet-class>seiseki.LogServlet</servlet-class>
     </servlet>
@@ -119,7 +110,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <url-pattern>/newLogin</url-pattern>
     </servlet-mapping>
 
-<servlet>
+    <servlet>
         <servlet-name>passReset</servlet-name>
         <servlet-class>seiseki.PassResetServlet</servlet-class>
     </servlet>
@@ -128,5 +119,21 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <url-pattern>/passReset</url-pattern>
     </servlet-mapping>
 
-     </web-app>
+<servlet>
+        <servlet-name>passS</servlet-name>
+        <servlet-class>seiseki.PassResetMailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>passS</servlet-name>
+        <url-pattern>/passResetMail</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>dataInput</servlet-name>
+        <servlet-class>seiseki.DataInputServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dataInput</servlet-name>
+        <url-pattern>/dataInput</url-pattern>
+    </servlet-mapping>
+     </web-app>
