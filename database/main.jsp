@@ -4,37 +4,45 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
-<title>さまざまなリンクのページ</title>
+<link href="<%=request.getContextPath() %>/database/mainstyle.css" rel="stylesheet" type="text/css">
+<title>トップページ</title>
 </head>
 <body>
-
-
-<p><a href="/mywebsite/introduction/hello.html"><input type="submit" value="3年1組個人ページ"></a></p>
-<br>
-<a href="<%=request.getContextPath() %>/introduction/hello.html">
-<input type="submit" value="〇〇(JSP特有パス指定)"></a>
-
+<h1 align=center>成績評価管理システム</h1>
 
 <br><br>
 
-
-
-
-
-<p><a href="/mywebsite/hello.html"><input type="submit" value="3年2組個人ページ(通常パス指定)"></a></p>
+<a href="<%=request.getContextPath()%>/log/log.jsp" class="button">ログアウト</a>
+<%-- <form action="<%=request.getContextPath()%>/log" method="Post">
+    <button type="submit" class="button">ログアウト</button>
+</form> --%>
+<!-- <a></a>か<form></form>のどっちかを使う -->
 <br>
-<a href="<%=request.getContextPath() %>/firstpage"><input type="submit" value="〇〇(JSP特有パス指定)"></a>
+<hr size="6" color="#c8ad7f"noshade/>
 <br>
-<p><a href="../hello.html"><input type="submit" value="新規追加(相対パス指定)"></a></p>
-<br><br>
 
 
-<form action="<%=request.getContextPath() %>/select" method="Post">
-<input type = "submit" value = "生徒選択へ">
+<a href="<%=request.getContextPath()%>/introduction/hello.html" class="button1">新規追加へ</a>
+<%-- <form action="<%=request.getContextPath()%>/" method="Post">
+    <button type="submit" class="button1">新規追加</button>
+</form> --%>
+<!-- <a></a>か<form></form>のどっちかを使う -->
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="form">
+<form action="<%=request.getContextPath()%>/select" method="Post">
+    <button type="submit" class="button2">グラフ表示へ</button>
 </form>
+<br>
+
 <form action="<%=request.getContextPath() %>/input" method ="Post">
-<input type = "submit" value ="成績入力画面へ">
+<button type = "submit" class="button3">表の表示へ</button>
 </form>
+</div>
 
 </body>
 </html>
