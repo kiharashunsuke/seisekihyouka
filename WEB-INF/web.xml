@@ -136,4 +136,13 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <servlet-name>dataInput</servlet-name>
         <url-pattern>/dataInput</url-pattern>
     </servlet-mapping>
+
+   <servlet>
+        <servlet-name>GraphS</servlet-name>
+        <servlet-class>database.GraphServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GraphS</servlet-name>
+        <url-pattern>/Graph</url-pattern>
+    </servlet-mapping>
      </web-app>
