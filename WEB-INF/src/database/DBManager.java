@@ -47,6 +47,45 @@ public class DBManager {
 			}
 		}
 	}
+	//CustomerList作成
+	public static<T>List<T>findAllCustomers(String sql, ResultSetBeanMapping<T> mapping)
+			throws SQLException{
+		/*findCustomer(String customersql, ResultSetBeanMapping<T> mapping)
+			throws SQLException{*/
+
+			Connection con = null;
+			Statement smt = null;
+			try {
+				con = getConnection();
+				smt = con.createStatement();
+				//データベースから呼び出し
+			ResultSet rs = smt.executeQuery(sql);/*(customersql);*/
+
+				//customerListを作成してDBのデータ（名前）をリストに登録
+				List<T> customerList = new ArrayList<T>();
+				while (rs.next()) {
+					T bean = mapping.createFromResultSet(rs);
+					customerList.add(bean);
+				}
+				return customerList;
+			} finally {
+				if (smt != null) {
+					try {
+						smt.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				if(con != null) {
+					try {
+						con.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+
+			}
+		}
 	//StudentListの作成
 	public static <T> List<T> findAll(String sql, ResultSetBeanMapping<T> mapping)
 		throws SQLException{
