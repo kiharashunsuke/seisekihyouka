@@ -70,7 +70,7 @@ public class GraphServlet extends HttpServlet {
 			/*request.setAttribute("StudentList", StudentList);*/
             request.setAttribute("studentNumber", studentNumber);
 
-            forwardURL = "/database/selectresult.jsp";
+            forwardURL = "/database/Graphresult.jsp";
 
 //---------------------------------------------------------------------------------------------------------//
 
