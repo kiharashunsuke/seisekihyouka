@@ -23,12 +23,12 @@ import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-public class TopServlet extends HttpServlet {
+public class GraphServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         String forwardURL = null;
 
-        //保存元
+        //保存元(PCによって保存元違う可能性あり)
         //String sourceFilePath1 = "C:\\pleiades\\tomcat\\8\\sample113.png";
         String sourceFilePath_japanese = "C:\\pleiades\\tomcat\\8\\sample_japanese.png";
         String sourceFilePath_math = "C:\\pleiades\\tomcat\\8\\sample_math.png";
@@ -49,7 +49,8 @@ public class TopServlet extends HttpServlet {
         String absolutePath_goukei = "C:\\Users\\pleiades\\workspace\\seisekihyouka\\sample_goukei.png";
 
         try {
-            List<CustomerBean> studentList = CustomerDAO.getStudentList();
+            List<CustomerBean> CustomerList = CustomerDAO.getCustomerList();
+			/*List<StudentBean> studentList = CustomerDAO.getStudentList();*/
 
             int number = 0;
 
@@ -65,7 +66,8 @@ public class TopServlet extends HttpServlet {
 			endtest = Integer.parseInt(request.getParameter("endtest"));;
 			System.out.println(endtest);
 
-            request.setAttribute("studentList", studentList);
+            request.setAttribute("CustomerList", CustomerList);
+			/*request.setAttribute("StudentList", StudentList);*/
             request.setAttribute("studentNumber", studentNumber);
 
             forwardURL = "/database/selectresult.jsp";
@@ -74,13 +76,16 @@ public class TopServlet extends HttpServlet {
 
 
 
-            CustomerBean cbean = studentList.get(studentNumber);
+            CustomerBean cbean = customerList.get(studentNumber);
+			/*StudentrBean sbean = studentList.get(studentNumber);*/
             List<Double> dataList_ave = new ArrayList<>();
 //            //StudentBean sbean1 = studentList.get(studentNumber);
             for(int j = 0; j < 30; j++ ) {
 
                 // (1)データセットの作成
-                CustomerBean cbean_ave = studentList.get(j);
+                CustomerBean cbean_ave = customerList.get(j);
+				/*StudentBean sbean_ave = studentList.get(j);*/
+
                  double value_ave;
                  value_ave = cbean_ave.getTyukan_1_1_japanese();//0
                 dataList_ave.add(value_ave);
