@@ -121,7 +121,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 
 <servlet>
         <servlet-name>passS</servlet-name>
-        <servlet-class>seiseki.PassResetMailServlet</servlet-class>
+        <servlet-class>seiseki.PassResetMailSentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>passS</servlet-name>
