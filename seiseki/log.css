@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  background-image:url("/seiseki/intro/white_6.jpg");
+  background-image:url("/seiseki1/test/white_00006.jpg");
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -63,10 +63,10 @@ body {
 }
 
 .login input[type="submit"]:hover {
-  background: #17c;
+  background: #000000;
 }
 
 /* Buttons' focus effect */
 .login input[type="submit"]:focus {
-  border-color: #05a;
+  border-color: #000000;
 }
