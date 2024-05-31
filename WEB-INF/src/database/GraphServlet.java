@@ -49,7 +49,7 @@ public class GraphServlet extends HttpServlet {
         String absolutePath_goukei = "C:\\Users\\pleiades\\workspace\\seisekihyouka\\sample_goukei.png";
 
         try {
-            List<CustomerBean> CustomerList = CustomerDAO.getCustomerList();
+            List<CustomerBean> customerList = CustomerDAO.getCustomerList();
 			/*List<StudentBean> studentList = CustomerDAO.getStudentList();*/
 
             int number = 0;
@@ -66,7 +66,7 @@ public class GraphServlet extends HttpServlet {
 			endtest = Integer.parseInt(request.getParameter("endtest"));;
 			System.out.println(endtest);
 
-            request.setAttribute("CustomerList", CustomerList);
+            request.setAttribute("customerList", customerList);
 			/*request.setAttribute("StudentList", StudentList);*/
             request.setAttribute("studentNumber", studentNumber);
 

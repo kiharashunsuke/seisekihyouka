@@ -23,7 +23,7 @@
 <div class="name">生徒名：</div>
   <!-- servletの呼び出し -->
 
-<form action = "<%=request.getContextPath() %>/top" method = "Post">
+<form action = "<%=request.getContextPath() %>/graph" method = "Post">
 <!-- nameはservletと一致させる必要あり。 -->
 <select name = "number">
  <%
@@ -39,7 +39,7 @@
 }
 %>
 </select>
-
+</form>
 <br><br>
 
 <div class="area1">テスト範囲を選択してください:</div>
@@ -77,27 +77,21 @@
 </select>
 <br><br>
 
-<a href="<%=request.getContextPath()%>/introduction/hello.html" class="button1">新規追加へ</a>
-<%-- <form action="<%=request.getContextPath()%>/" method="Post">
-    <button type="submit" class="button1">新規追加</button>
-</form> --%>
-<!-- <a></a>か<form></form>のどっちかを使う -->
-<br>
-<br>
-<br>
-<br>
+<a href="<%=request.getContextPath()%>/seiseki/testAdd.jsp" class="button1">新規追加へ</a>
 
 
-<!-- <div class="form"> -->
-<%-- <form action="<%=request.getContextPath()%>/select" method="Post"> --%>
-    <button type="submit" class="button2">グラフ表示へ</button>
-</form>
+
+<div class="form">
+<button type="submit" class="button2">グラフ表示へ</button>
+
 <br>
 
 <form action="<%=request.getContextPath() %>/input" method ="Post">
 <button type = "submit" class="button3">表の表示へ</button>
 </form>
-<!-- </div> -->
+</div>
+
+
 
 </body>
 </html>
